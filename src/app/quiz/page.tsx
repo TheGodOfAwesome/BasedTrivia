@@ -39,7 +39,7 @@ const Quiz: React.FC = () => {
 
 				<MuxPlayer
 					streamType="live"
-					playbackId="52FW4E9lx1MYdcc9HLxi7BDokOWwsOiklNBrp00xuOcw"
+					playbackId="nILpL8Eo00nAoOis1cvjbUpPq9c6w8bAkSjmacw8AHxo"
 					metadataVideoTitle="Placeholder (optional)"
 					metadataViewerUserId="Placeholder (optional)"
 					primaryColor="#FFFFFF"
