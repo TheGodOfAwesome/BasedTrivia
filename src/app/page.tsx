@@ -91,7 +91,7 @@ function Footer() {
 			<Link
 				className="text-center text-sm text-gray-400"
 				target="_blank"
-				href="https://github.com/thirdweb-example/account-abstraction"
+				href="https://github.com/TheGodOfAwesome/BasedTrivia"
 			>
 				View code on GitHub
 			</Link>
