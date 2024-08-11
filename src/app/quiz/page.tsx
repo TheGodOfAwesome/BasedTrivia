@@ -131,8 +131,9 @@ const NFTClaimer: React.FC<NFTClaimerProps> = (props: NFTClaimerProps) => {
 								onError={(error) => {
 									alert(`Error: ${error.message}`);
 								}}
-								onTransactionConfirmed={async () => {
+								onTransactionConfirmed={async (res) => {
 									alert("Claim successful!");
+									alert("Check your transaction at " + res.transactionHash + " to see more visit " + "https://optimism-sepolia.blockscout.com/tx/" + res.transactionHash);
 								}}
 							>
 								Select
