@@ -44,15 +44,7 @@ function Header() {
 			</h1>
 
 			<p className="text-zinc-300 text-base">
-				Test your blockchain knowledge to see if you can answer Web3’s most savage questions.
-				{/* <a
-					className="text-purple-400"
-					target="_blank"
-					href="https://portal.thirdweb.com/connect"
-				>
-					Connect SDK
-				</a> */}
-				.
+				Test your blockchain knowledge to see if you can answer Web3’s most BASED questions.
 			</p>
 		</header>
 	);
@@ -65,7 +57,7 @@ function Menu() {
 			<MenuItem
 				title="Join Quiz"
 				href="/quiz"
-				description="Execute transactions on different chains maintaining the same smart account address."
+				description="Test your knowledge and win prizes on blockchain's most based quiz."
 			/>
 		</div>
 	);

@@ -12,6 +12,7 @@ import { accountAbstraction, client, editionDropTokenId } from "../constants";
 import Link from "next/link";
 import { baseSepolia, optimismSepolia } from "thirdweb/chains";
 import { ThirdwebContract, getContract, defineChain } from "thirdweb";
+import MuxPlayer from "@mux/mux-player-react"; 
 
 const Quiz: React.FC = () => {
 	const smartAccount = useActiveAccount();
@@ -19,16 +20,33 @@ const Quiz: React.FC = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<h1 className="text-center text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-12 text-zinc-100">
-				Based Trivia
-			</h1>
-			<ConnectButton
-				client={client}
-				accountAbstraction={accountAbstraction}
-				connectModal={{
-					size: "compact",
-				}}
-			/>
+			<div className="flex flex-col items-center" style={{paddingBottom:"12px"}}>
+				<h1 className="text-center text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-12 text-zinc-100">
+					Based Trivia
+				</h1>
+				<ConnectButton
+					client={client}
+					accountAbstraction={accountAbstraction}
+					connectModal={{
+						size: "compact",
+					}}
+				/>
+			</div>
+			
+			<div 
+				// className="relative bg-black h-56 lg:h-96 w-full xl:w-3/5 overflow-hidden"
+			>
+
+				<MuxPlayer
+					streamType="live"
+					playbackId="52FW4E9lx1MYdcc9HLxi7BDokOWwsOiklNBrp00xuOcw"
+					metadataVideoTitle="Placeholder (optional)"
+					metadataViewerUserId="Placeholder (optional)"
+					primaryColor="#FFFFFF"
+					secondaryColor="#000000"
+				/>
+
+			</div>
 
 			<div className="flex flex-row">
 				<NFTClaimer
@@ -93,7 +111,7 @@ const NFTClaimer: React.FC<NFTClaimerProps> = (props: NFTClaimerProps) => {
 			) : (
 				<>
 					{nft ? (
-						<MediaRenderer client={client} src={nft.metadata.image} />
+						<MediaRenderer client={client} src={nft.metadata.image} style={{maxHeight:"50px"}}/>
 					) : null}
 					{props.receiverAddress ? (
 						<>
